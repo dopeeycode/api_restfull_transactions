@@ -6,6 +6,7 @@ import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
 
 // Request Body : HTTps => Criar ou editar algum recurso
 
+// Priâmide de testes: E2E (não dependem de nenhuma tecnologia, não depedem de arquitetura)
 export async function transactionsRoutes(app: FastifyInstance) {
   app.get(
     '/',
