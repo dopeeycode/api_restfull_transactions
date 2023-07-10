@@ -34,14 +34,14 @@ export async function transactionsRoutes(app: FastifyInstance) {
         id: z.string().uuid(),
       })
       const { id } = getTransactionsParmsByIdSchema.parse(request.params)
-      const transactions = await knex('transactions')
+      const transaction = await knex('transactions')
         .where({
           session_id: sessionId,
           id,
         })
         .first()
 
-      return { transactions }
+      return { transaction }
     },
   )
 
